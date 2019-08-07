@@ -407,15 +407,18 @@ case "filterlaporanpart":
 				      echo"<form method='post' class='form' action='?module=laporan&act=hasillaporanpart'>
                             <table id='tablemodul'>
 							<tr>
-							<td align=right class=cc>Laporan</td><td><select class='branch' name='filter' >
-							<option value='' selected>Silakan Pilih</option>
-							<option value='USE'>Penggunaan Part</option>
-							<option value='BUY'>Pembelian Part</option>
-							</td>
+                                                            <td align=right class=cc>Laporan</td>
+                                                            <td>
+                                                                <select class='branch' name='filter' >
+                                                                    <option value='' selected>Silakan Pilih</option>
+                                                                    <option value='USE'>Penggunaan Part</option>
+                                                                    <option value='BUY'>Pembelian Part</option>
+                                                            </td>
 							</tr>
 							
 							<tr>
-							<td>Tanggal</td><td><input type=text name='tanggal1' value='' id='tanggal1' size=15> s/d <input type=text name='tanggal2' value='' id='tanggal2' size=15></td>
+                                                            <td>Tanggal</td>
+                                                            <td><input type=text name='tanggal1' value='' id='tanggal1' size=15> s/d <input type=text name='tanggal2' value='' id='tanggal2' size=15></td>
 							</tr>
 							<tr>
 							<td colspan='2'>
