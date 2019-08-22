@@ -752,6 +752,10 @@
                                                             <td align=left class=cc>CURRENT STOCK</td>
                                                             <td><input type='text' name='part_stock'  placeholder='limit Stock' size='8' value='$data[part_stock]'></td>
 							</tr>
+                                                        <tr>
+                                                            <td align=left class=cc>Lead Time Order</td>
+                                                            <td><input type='text' name='part_leadtimeorder'  placeholder='jumlah hari' size='8' value='$data[part_leadtimeorder]'> hari</td>
+							</tr>
 							<tr>
                                                             <td align=left class=cc>Location</td><td>
                                                                 <select name='part_location'>

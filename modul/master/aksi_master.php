@@ -25,6 +25,7 @@ if ($module == 'master' AND $act == 'addpart') {
 									'$_POST[part_price]',
 									'0',
 									'$_POST[part_limit]',
+                                                                        '$_POST[part_leadtimeorder]',
 									'$_POST[part_location]',
 									'$_POST[part_supplier]',
 									'$_POST[part_application]'
@@ -41,6 +42,7 @@ if ($module == 'master' AND $act == 'addpart') {
                                                 part_freq= '$_POST[part_freq]',
                                                 part_limit= '$_POST[part_limit]',
                                                 part_stock= '$_POST[part_stock]',
+                                                part_leadtimeorder= '$_POST[part_leadtimeorder]',
                                                 part_location= '$_POST[part_location]',
                                                 part_application= '$_POST[part_application]',
                                                 part_supplier= '$_POST[part_supplier]'
