@@ -157,16 +157,16 @@
 							<td align=left class=cc>Type Supplier</td>
                                                         <td>
                                                             <select name='type_supplier'>";
-                                        if ($data[type_supplier] == 'domestik') {
-                                            echo "<option value='domestik' selected>Domestik</option>"
-                                            . "<option value='impor'>Impor</option>";
-                                        } elseif ($data[type_supplier] == 'impor') {
-                                            echo "<option value='domestik'>Domestik</option>"
-                                            . "<option value='impor' selected>Impor</option>";
+                                        if ($data[type_supplier] == 'Domestik') {
+                                            echo "<option value='Domestik' selected>Domestik</option>"
+                                            . "<option value='Impor'>Impor</option>";
+                                        } elseif ($data[type_supplier] == 'Impor') {
+                                            echo "<option value='Domestik'>Domestik</option>"
+                                            . "<option value='Impor' selected>Impor</option>";
                                         } else {
                                             echo "<option value='' selected></option>"
-                                            . "<option value='domestik'>Domestik</option>"
-                                            . "<option value='impor'>Impor</option>";
+                                            . "<option value='Domestik'>Domestik</option>"
+                                            . "<option value='Impor'>Impor</option>";
                                         }
                                         echo"</select>
                                                         </tr>
@@ -733,7 +733,7 @@
 							</tr>
                                                         <tr>
                                                             <td align=left class=cc>Frequency Replace Part</td>
-                                                            <td><select>";
+                                                            <td><select name='part_frequency'>";
                                                         for ($count = 1; $count < 13; $count++) {
                                                             if ($count == $data['part_freq']) {
                                                                 $selected = 'selected';
@@ -745,10 +745,6 @@
                                                         echo "</select></td>
 							</tr>
                                                         <tr>
-                                                            <td align=left class=cc>Date Replace Part</td>
-                                                            <td><input type='text' name='part_replacedate' placeholder='Tanggal ganti' size='10' value='$data[part_replacedate]'></td>
-							</tr>
-							<tr>
                                                             <td align=left class=cc>Minimum Stock</td>
                                                             <td><input type='text' name='part_limit'  placeholder='limit Stock' size='8' value='$data[part_limit]'></td>
 							</tr>
@@ -920,6 +916,7 @@
 <option value='masterpart.part_number'> Nomor Part </option>
 <option value='master_location.name_location'> Location </option>
 <option value='master_supplier.name_supplier'> Supplier </option>
+<option value='master_supplier.type_supplier'> Jenis Supplier </option>
 <option value='master_application.name_application'> Aplikasi Mesin</option>
 </select>
 <input type='text' name='value'>
@@ -940,7 +937,6 @@
 	<th>Harga Satuan</th>
 	<th>Pemakaian Mesin</th>
         <th>Frequency Replace Part</th>
-        <th>Date Replace Part</th>
 	<th>Lokasi Part</th>
 	<th>Nama Supplier</th>
         <th>Jenis Supplier</th>
@@ -988,7 +984,6 @@
 			<td>$data[part_price]</td>
 			<td>$data[name_application]</td>
                         <td>$data[part_freq]</td>
-                        <td>$data[part_replacedate]</td>
 			<td>$data[name_location]</td>
 			<td>$data[name_supplier]</td>
                         <td>$data[type_supplier]</td>
